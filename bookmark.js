@@ -16,32 +16,75 @@ javascript:(function() {
   <title>Chat GPT: ${title}</title>
   <meta name="generator" content="chatGPT Saving Bookmark"/>
   <style>
-    body {
-      background-color: rgb(32,33,35);
-      color: rgb(236,236,241);
-      font-size: 20px;
-      font-family: Calibri,Arial, sans-serif;
-      margin: -10px;
-    }
-    body > .w-full {
-      padding: 40px;
-    }
-    /* prompt */
-    body > .w-full:nth-child(2n+1) {
-      background: rgb(52,53,65);
-    }
-    /* response */
-    body > .w-full:nth-child(2n+2) {
-      background: rgb(68,70,84);
-    }
-    .whitespace-pre-wrap {
-      white-space: pre-wrap;
-    }
-    .flex-col {
-      max-width: 1000px;
-      margin: 0px auto;
-    }
-  </style>
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif !important;
+  line-height: 28px;
+  color: whitesmoke !important;
+}
+body > .w-full {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+body > .w-full:nth-child(2n+1)::before {
+    content: "Prompt";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 16px;
+    background: none;
+    font-family: Arial, sans-serif !important;
+    line-height: 18px;
+    color: whitesmoke !important;
+}
+body > .w-full:nth-child(2n+2)::before {
+    content: "AI";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 16px;
+    background: none;
+    font-family: Arial, sans-serif !important;
+    line-height: 18px;
+    color: whitesmoke !important;
+}
+/* prompt */
+body > .w-full:nth-child(2n+1) {
+  background: #3B3F41;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+/* response */
+body > .w-full:nth-child(2n+2) {
+  background: #52575A;
+  margin: 10px;
+}
+p{
+    color: whitesmoke;
+}
+a, a:visited {
+  color: #7792cd;
+}
+pre {
+  margin: 0 0 1em 0;
+  display: inline-block;
+  width: 100%;
+}
+pre code.hljs {
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+.flex-col {
+  max-width: 850px;
+  margin: 0px auto;
+}
+</style>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/default.min.css"/>
 </head>
 <body>${template.innerHTML}</body>
